@@ -1,10 +1,12 @@
 import React from "react";
+// import path from "path";
 
-const ElementsApiComponent = () => {
+const ElementsApiComponent = ({ jsSource, cssSource, yamlSource }) => {
   React.useEffect(() => {
     // Load the Stoplight Elements script dynamically
     const script = document.createElement("script");
-    script.src = "https://unpkg.com/@stoplight/elements/web-components.min.js";
+    // console.log(path.dirname)
+    script.src = jsSource;
     script.async = true;
     document.body.appendChild(script);
 
@@ -18,11 +20,11 @@ const ElementsApiComponent = () => {
       {/* Styles for Stoplight Elements */}
       <link
         rel="stylesheet"
-        href="https://unpkg.com/@stoplight/elements/styles.min.css"
+        href={cssSource}
       />
       <div>
         <elements-api
-          apiDescriptionUrl="https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.yaml"
+          apiDescriptionUrl={yamlSource}
           router="hash"
           layout="sidebar"
         />
