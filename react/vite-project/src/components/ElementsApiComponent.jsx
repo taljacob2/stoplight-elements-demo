@@ -1,11 +1,9 @@
 import React from "react";
-// import path from "path";
 
 const ElementsApiComponent = ({ jsSource, cssSource, yamlSource }) => {
   React.useEffect(() => {
     // Load the Stoplight Elements script dynamically
     const script = document.createElement("script");
-    // console.log(path.dirname)
     script.src = jsSource;
     script.async = true;
     document.body.appendChild(script);
