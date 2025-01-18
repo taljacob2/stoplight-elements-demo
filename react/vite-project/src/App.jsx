@@ -8,7 +8,7 @@ function App() {
       <ElementsApiComponent 
         jsSource={"https://unpkg.com/@stoplight/elements/web-components.min.js"}
         cssSource={"https://unpkg.com/@stoplight/elements/styles.min.css"}
-        yamlSource={"https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.yaml"}
+        openApiSource={"https://api.apis.guru/v2/specs/github.com/1.1.4/openapi.yaml"}
       />
     </div>
   );

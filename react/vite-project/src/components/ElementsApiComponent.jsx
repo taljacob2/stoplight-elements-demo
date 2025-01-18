@@ -1,6 +1,6 @@
 import React from "react";
 
-const ElementsApiComponent = ({ jsSource, cssSource, yamlSource }) => {
+const ElementsApiComponent = ({ jsSource, cssSource, openApiSource }) => {
   React.useEffect(() => {
     // Load the Stoplight Elements script dynamically
     const script = document.createElement("script");
@@ -22,7 +22,7 @@ const ElementsApiComponent = ({ jsSource, cssSource, yamlSource }) => {
       />
       <div>
         <elements-api
-          apiDescriptionUrl={yamlSource}
+          apiDescriptionUrl={openApiSource}
           router="hash"
           layout="sidebar"
         />
